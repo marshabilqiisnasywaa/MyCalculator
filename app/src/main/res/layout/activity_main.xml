@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Display Perhitungan -->
+    <TextView
+        android:id="@+id/calculationDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="15,000 - 7500"
+        android:textColor="#666666"
+        android:textSize="25sp"
+        android:gravity="end"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvResult" />
+
+    <!-- Display hasil -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="7,500"
+        android:textColor="#666666"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/calculationDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewDivider" />
+
+    <!-- Divider line -->
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="150dp"
+        android:layout_height="5dp"
+        android:background="#4D4C4B"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintBottom_toTopOf="@id/gridLayout" />
+
+    <!-- Pad angka dan operator -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewDivider"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Buttons (adjust background or tint conflicts) -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAC"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="25sp"
+            android:background="@drawable/button_background_orange"
+            android:text="AC"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPercentage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:background="@drawable/button_background"
+            android:text="%"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- tombol bagi -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDivision"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="/"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol kali -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMultiplication"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="x"
+            android:background="@drawable/button_background"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+
+        <!-- Tombol 7 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="7"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol 8 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="8"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol 9 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="9"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol Plus -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddition"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="36sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="+"
+            android:background="@drawable/button_background"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+
+        <!-- Tombol 4-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="4"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- tombol 5 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="5"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- tombol 6 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="6"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol min -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubtraction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="45sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="-"
+            android:background="@drawable/button_background"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+
+        <!-- tombol 1 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="1"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- tombol 2 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="2"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- tombol 3 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="3"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol sama dengan -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEquals"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowSpan="2"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="30sp"
+            android:backgroundTint="#FF9800"
+            android:text="="
+            android:background="@drawable/button_background_orange"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Tombol 0 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="2"
+            android:layout_margin="5dp"
+            android:textSize="28sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="0"
+            android:background="@drawable/button_background"
+            android:textColor="#666666"
+            android:textStyle="bold" />
+
+        <!-- Tombol Desimal -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDecimal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+            android:textSize="35sp"
+            android:backgroundTint="#F5F5F5"
+            android:text="."
+            android:background="@drawable/button_background"
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
